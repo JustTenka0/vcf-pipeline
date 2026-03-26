@@ -1,0 +1,7 @@
+*.bam
+*.bai
+*.vcf*
+*.fasta
+*.fai
+*.bt2
+*_analysis/
