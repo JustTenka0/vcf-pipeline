@@ -41,7 +41,7 @@ project_folder/
     ├── FAM01_child.fq.gz
     ├── FAM01_father.fq.gz
     └── FAM01_mother.fq.gz
-
+```
 ### 4. How to Use
 
 1. **Prepare your environment**: Ensure all dependencies (Samtools, FreeBayes, etc.) are in your PATH.

@@ -155,6 +155,23 @@ echo "[$(date)] Setting up output directory: ${CASE}_analysis"
 mkdir -p "${CASE}_analysis"
 cd "${CASE}_analysis"
 
+# --- AUTO-INDEXING SECTION ---
+echo "Verifying reference indices..."
+
+# Genera l'indice .fai se manca
+if [[ ! -f "${FASTA}.fai" ]]; then
+    echo "  ! Index .fai not found. Generating now with samtools..."
+    samtools faidx "${FASTA}"
+fi
+
+# Controllo indice Bowtie2 (se manca, lo crea invece di uscire con errore)
+if ! ls "${BOWTIE2_INDEX}".*.bt2 &>/dev/null; then
+    echo "  ! Bowtie2 index not found at ${BOWTIE2_INDEX}"
+    echo "  ! Building new index (this may take a while)..."
+    bowtie2-build "${FASTA}" "$(basename "${BOWTIE2_INDEX}")"
+fi
+# -----------------------------
+
 ln -sf "${BOWTIE2_INDEX}".* .
 ln -sf "${FASTA}" .
 ln -sf "${FASTA}.fai" .
