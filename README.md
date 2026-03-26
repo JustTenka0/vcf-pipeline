@@ -35,9 +35,9 @@ You must have the following reference data ready:
 ### 3. Folder Structure
 The script will prompt for the **Reads Directory**. For best results, keep your raw data organized:
 ```text
-project_folder/
+FAM01/
 ├── pipeline.sh
-└── raw_data/
+└── data/
     ├── FAM01_child.fq.gz
     ├── FAM01_father.fq.gz
     └── FAM01_mother.fq.gz
