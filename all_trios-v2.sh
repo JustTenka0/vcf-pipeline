@@ -92,7 +92,7 @@ for CASE_DIR in trio_1 trio_2 trio_3 trio_4 trio_5; do
     bcftools filter -i 'QUAL>10' -Ov -o "${CASE}_candidates.vcf"
 
 
-    # --- ANNOTAZIONE CON VEP ---
+    # --- VEP ANNOTATION ---
     echo "[STEP] VEP annotation..."
     
     vep -i "${CASE}_candidates.vcf" -o "${CASE}_annotated.vcf" \
@@ -100,14 +100,10 @@ for CASE_DIR in trio_1 trio_2 trio_3 trio_4 trio_5; do
         --assembly GRCh38 --use_given_ref --mane --pick_allele \
         --af --af_1kg --af_gnomade --max_af --sift b --polyphen b --no_fasta --force_overwrite
 
-    # --- FILTRO FINALE (Rare & High Impact) ---
-    echo "[STEP] Final report generation, IMPACT HIGH"
-    filter_vep -i "${CASE}_annotated.vcf" -o "${CASE}_HIGH.vcf" \
-        --filter "IMPACT is HIGH and (not MAX_AF or MAX_AF < 0.0001)" --force_overwrite
-        
-   echo "[STEP] Final report generation, IMPACT MODERATE"
-    filter_vep -i "${CASE}_annotated.vcf" -o "${CASE}_MODERATE.vcf" \
-        --filter "IMPACT is MODERATE and (not MAX_AF or MAX_AF < 0.0001)" --force_overwrite
+    # --- FINAL FILTERING(Rare & High Impact) ---
+    echo "[STEP] Final report generation"
+    filter_vep -i "${CASE}_annotated.vcf" -o "${CASE}_filtered_final.vcf" \
+        --filter "(IMPACT is HIGH or IMPACT is MODERATE) and (not MAX_AF or MAX_AF < 0.0001)" --force_overwrite
 
 
 
