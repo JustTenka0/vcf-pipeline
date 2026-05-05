@@ -1,32 +1,9 @@
-*.bam
-*.bai
-*.sam
-*.cram
 
-*.vcf
-*.vcf.gz
-*.vcf.gz.tbi
-*.vcf.idx
-*.cand.vcf
-*.vep_annotated.vcf
-*.vep_filtered.vcf
 
 *.fasta
 *.fa
 *.fai
 *.bt2
-*.dict
-
-*.html
-*.zip
-*_fastqc/
-*_qualimap/
-multiqc_data/
-multiqc_report.html
-
-*.bg
-*.bedgraph
-*.bw
 
 *.log
 *.tmp
