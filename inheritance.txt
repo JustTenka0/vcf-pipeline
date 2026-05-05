@@ -1,0 +1,15 @@
+# Inheritance mode file
+# One line per trio folder — folder name must match exactly
+# Supported modes: AR, AD_inherited, AD_denovo
+#
+# Format (tab-separated):
+#   trio_folder   mode           affected_parent
+#
+# affected_parent: father | mother | NA (only relevant for AD_inherited)
+#
+# Example:
+trio_1	AR	NA
+trio_2	AD_inherited	father
+trio_3	AD_denovo	NA
+trio_4	AR	NA
+trio_5	AR	NA
