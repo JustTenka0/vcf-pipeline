@@ -11,10 +11,10 @@
 *.vep_annotated.vcf
 *.vep_filtered.vcf
 
-.fasta
-.fa
-.fai
-.bt2
+*.fasta
+*.fa
+*.fai
+*.bt2
 *.dict
 
 *.html
