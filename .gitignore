@@ -1,3 +1,21 @@
+*.bam
+*.bai
+*.sam
+*.cram
+
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.vcf.idx
+*.cand.vcf
+*.vep_annotated.vcf
+*.vep_filtered.vcf
+
+*.dict
+
+*.html
+*.zip
+
 
 
 *.fasta
