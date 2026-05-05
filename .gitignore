@@ -16,7 +16,9 @@
 *.html
 *.zip
 
-
+*.bg
+*.bedgraph
+*.bw
 
 *.fasta
 *.fa
