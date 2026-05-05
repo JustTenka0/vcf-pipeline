@@ -5,7 +5,7 @@ An automated Bash pipeline for processing Trio Genomic Data (Child, Father, Moth
 ## ❗NOTES
 1. Make sure to change the inheritance and directory names of the `inheritance.txt` file.
 2. Files are heavy, download them only if you really need them. 
-    * Target and Indexing files are repreible in `ref/` directory. 
+    * Target and Indexing files are reperible in `ref/` directory. 
     * Original file used are in `data/` directory.
 3. For this case the files name are named in the same way for each trios, but are different.
 
@@ -24,7 +24,7 @@ Ensure the following tools are installed and accessible in your `$PATH`:
 
 ## 🛠 Setup and Input Requirements
 
-The script is interactive, but it requires specific file naming and directory structures to function correctly.
+The script requires specific file naming and directory structures to function correctly.
 
 ### 1. Naming Convention
 Before starting, ensure your FASTQ files are named using the following pattern. Since the files are paired ends simulated data, there are 2 fq.gz for each individual (where `${CASE_ID}` is your unique identifier, e.g., `HG00427`):
