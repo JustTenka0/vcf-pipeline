@@ -4,7 +4,10 @@ An automated Bash pipeline for processing Trio Genomic Data (Child, Father, Moth
 
 ## ❗NOTES
 1. Make sure to change the inheritance and directory names of the `inheritance.txt` file.
-2. Target and indexing files are heavy. 
+2. Files are heavy, download them only if you really need them. 
+    * Target and Indexing files are repreible in `ref/` directory. 
+    * Original file used are in `data/` directory.
+3. For this case the files name are named in the same way for each trios, but are different.
 
 ---
 
@@ -46,6 +49,8 @@ working_directory/
     ├── HG00428.target_R2.fq.gz
     ├── HG00429.target_R1.fq.gz
     └── HG00429.target_R2.fq.gz
+└── trio_2/
+    ...
 ```
 ### 4. How to Use
 
